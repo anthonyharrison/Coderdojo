@@ -41,16 +41,23 @@ def check_balls(balls, my_balls):
 
 # Main
 
-no_of_balls = int(input("How many balls? "))
-max_number = int(input("Largest number? "))
+valid_draw = False
+while not valid_draw:
+	no_of_balls = int(input("How many balls? "))
+	max_number = int(input("Largest number? "))
+	# Check the number of balls is less than largest number
+	if max_number >= no_of_balls:
+		valid_draw = True
+	else:
+		print ("Largest number needs to be at least the same as the number of balls. Pleaase try again")
 
 my_choice = []
 for i in range(no_of_balls):
 	valid_ball = False
 	while not valid_ball:
 		ball = input("Choose ball " + str(i+1) + " > ")
-		# Check ball is in valid range
-		if int(ball) in range (1, max_number+1):
+		# Check ball is in valid range and not already chosen
+		if int(ball) in range (1, max_number+1) and ball not in my_choice:
 			valid_ball = True
 	my_choice.append(ball)
 
