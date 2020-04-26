@@ -50,7 +50,7 @@ for i in range(no_of_balls):
 	while not valid_ball:
 		ball = input("Choose ball " + str(i+1) + " > ")
 		# Check ball is in valid range
-		if int(ball) in range (1, max_number+1):
+		if int(ball) in range (1, max_number+1) and ball not in my_choice:
 			valid_ball = True
 	my_choice.append(ball)
 
