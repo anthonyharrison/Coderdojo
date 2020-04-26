@@ -66,7 +66,7 @@ result = check_balls(balls, my_choice)
 if result == no_of_balls:
 	print ("\n\n\n!!!!!!WINNER!!!!!!\n\n\n")
 elif result == 0:
-	print ("\n\nUnfortunatley you had no matching balls")
+	print ("\n\nUnfortunately you had no matching balls")
 elif result == 1:
 	print ("\n\nYou had 1 matching ball")
 else:
