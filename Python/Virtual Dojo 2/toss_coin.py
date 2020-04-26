@@ -4,6 +4,7 @@ import random
 
 def toss_coin(count):
 	HEADS = 0
+	TAILS = 1
 	heads = 0
 	tails = 0
 	
