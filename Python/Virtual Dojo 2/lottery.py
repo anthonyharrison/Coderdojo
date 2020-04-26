@@ -50,7 +50,7 @@ for i in range(no_of_balls):
 	while not valid_ball:
 		ball = input("Choose ball " + str(i+1) + " > ")
 		# Check ball is in valid range
-		if int(ball) in range (1, max_number+1):
+		if int(ball) in range (1, max_number+1) and ball not in my_choice:
 			valid_ball = True
 	my_choice.append(ball)
 
@@ -66,7 +66,7 @@ result = check_balls(balls, my_choice)
 if result == no_of_balls:
 	print ("\n\n\n!!!!!!WINNER!!!!!!\n\n\n")
 elif result == 0:
-	print ("\n\nUnfortunatley you had no matching balls")
+	print ("\n\nUnfortunately you had no matching balls")
 elif result == 1:
 	print ("\n\nYou had 1 matching ball")
 else:
